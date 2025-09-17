@@ -1,6 +1,11 @@
-// This file is now empty but kept to avoid Next.js warnings
-// If no middleware is needed, this file can be deleted entirely
+import { NextResponse } from "next/server"
+import type { NextRequest } from "next/server"
+
+export function middleware(request: NextRequest) {
+  // Hiçbir işlem yapmadan devam et
+  return NextResponse.next()
+}
 
 export const config = {
-  matcher: [],
+  matcher: [], // Boş bırakabilirsin veya "/about" gibi path'ler ekleyebilirsin
 }
